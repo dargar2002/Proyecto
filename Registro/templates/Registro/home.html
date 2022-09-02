@@ -1,0 +1,17 @@
+{% extends "Registro/base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+{% include "Nav/navbar.html" %}
+
+<div class="cover-container d-flex w-50 h-200 p-3 m-auto flex-column text-center">
+    <main class="px-3 text-light">
+        <h1 class="mb-4 p-4">CONCURSO DE POESIA</h1>
+        <p class="lead mb-4 p-4">La Universidad de Guatemala tendrá un evento de poesía y se ha emitido invitación a todos los jóvenes estudiantes a participar en el evento para demostrar sus habilidades en el arte de la poesía, para participar, unicamente debes de registrarte</p>
+        <button type="submit" class="btn"> <a href="/registro"> INSCRIBIRSE </a></button>
+    </main>
+</div>
+
+{% endblock %}

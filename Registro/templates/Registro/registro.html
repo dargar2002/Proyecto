@@ -1,0 +1,41 @@
+{% extends "Registro/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+{% include "Nav/navbar.html" %}
+
+    {% if form.errors %}
+
+        <div class="alert alert-danger" role="alert">
+        This is a danger alert—check it out!
+        </div>
+
+    {% endif %}
+
+    <div class="cover-container d-flex w-50 h-600 p-3 m-auto flex-column ">
+        <main class="px-3 text-light">
+            <h1 class="text-center p-4 m-auto">REGISTRO</h1>
+        </main>
+
+    <form action="{% url 'guardarRegistro' %}" method="POST">
+
+        {% csrf_token %}
+
+        {% if mensaje %}
+            <div class="alert alert-success" role="alert">
+            This is a success alert—check it out!
+            </div>
+        {% endif %}
+
+        {{form|crispy}}
+        
+        <input type="submit" class="btn btn-primary" value="Registrarse" id="enviar">
+
+    </form>
+    </div>
+    
+{% endblock %}

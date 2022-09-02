@@ -1,0 +1,20 @@
+{% extends "Registro/base.html" %}
+
+{% block title %} Fecha de Concurso {% endblock %}
+
+{% block content %}
+
+{% include "Nav/navbar.html" %}
+
+<div class="row justify-content-center align-items-center vh-100 mt-4">
+
+    <main class="px-3 text-light text-center">
+        <h1 class="fs-1 mb-4 p-4">Tu fecha de participación es el <br> {{Fecha}}</h1>
+    </main>
+
+</div>
+
+<div class="row justify-content-center align-items-center vh-100 mt-4">
+    <button type="submit" class="btn"> <a href="/registro"> GENIAL </a></button>
+</div>
+{% endblock %}
